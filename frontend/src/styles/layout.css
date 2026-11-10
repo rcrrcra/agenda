@@ -1,0 +1,28 @@
+/* ===== Layout: containers, cabeçalho, abas, cards e grades ===== */
+
+.wrap { max-width: 560px; margin: 0 auto; padding: 16px; }
+.wide { max-width: 860px; }                           /* painel de administração */
+.narrow { max-width: 400px; padding-top: 10vh; }      /* tela de login */
+.narrow h1 { margin-bottom: 16px; }
+
+header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.who { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+/* Abas (componente Tabs) */
+nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+nav button.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.subnav { flex-wrap: wrap; }
+.subnav button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.subnav.inline { margin-bottom: 0; }                  /* abas dentro de formulários */
+
+/* Card: bloco branco que agrupa um formulário ou lista */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 14px; }
+
+/* Grades responsivas de campos */
+.grid2, .filters { display: grid; gap: 12px; }
+.grid2 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.filters { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+
+.row { display: flex; gap: 8px; align-items: center; }
+.row input { flex: 1; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }

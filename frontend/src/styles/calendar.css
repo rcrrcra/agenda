@@ -1,0 +1,15 @@
+/* ===== Calendário da agenda ===== */
+.calBar { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.calScroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+.calGrid { display: grid; min-width: 560px; }
+.calHead { text-align: center; font-weight: 600; padding: 6px 4px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.calHead.today { color: var(--accent); }
+.calHours { position: relative; font-size: .75rem; color: var(--muted); }
+.calHours span { position: absolute; right: 6px; transform: translateY(-50%); }
+.calCol { position: relative; border-left: 1px solid var(--line); }
+.calCol i { position: absolute; left: 0; right: 0; border-top: 1px solid var(--line); opacity: .6; }
+.calEvent { position: absolute; padding: 2px 4px; min-height: 0; font-size: .75rem; line-height: 1.2; text-align: left; overflow: hidden; border-radius: 6px; border: 1px solid var(--accent); background: color-mix(in srgb, var(--accent) 18%, var(--surface)); }
+.calEvent.st-completed { border-color: var(--st-completed, var(--accent)); }
+.calEvent.st-no_show { border-color: var(--st-no_show); background: color-mix(in srgb, var(--st-no_show) 18%, var(--surface)); }
+.calEvent.sel { outline: 2px solid var(--ink); z-index: 1; }
+.calDetail { border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; gap: 8px; }
